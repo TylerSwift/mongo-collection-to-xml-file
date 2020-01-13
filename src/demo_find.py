@@ -1,7 +1,5 @@
 from pymongo import MongoClient
-from pprint import pprint
-from dicttoxml import dicttoxml
-from xmltodict import unparse
+
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import ElementTree
 import yaml
@@ -24,37 +22,13 @@ documents = collection.find(
     }
 )
 
-# xml = dicttoxml(obj)
-# xml_string = str(xml)
-# xml_string_2 = unparse({"Document": obj})
-#
-# print(type(xml_string))
-# print(xml_string)
-#
-# print(type(xml))
-# pprint(xml)
-#
-# print(type(xml_string_2))
-# print(xml_string_2)
-
 customers = ET.Element('Customers')
 
 for doc in documents:
     customer = ET.SubElement(customers, 'Customer')
-
-    dlr_cd = ET.SubElement(customer, 'DLR_CD')
-    dlr_cd.text = doc['DLR_CD']
-
-    db_num = ET.SubElement(customer, 'DB_NM')
-    db_num.text = doc['DB_NM']
-
-    lgl_nm = ET.SubElement(customer, 'LGL_NM')
-    lgl_nm.text = doc['LGL_NM']
-
-    fed_tax_no = ET.SubElement(customer, 'FED_TAX_NO')
-    fed_tax_no.text = doc['FED_TAX_NO']
-
-
+    for key in doc:
+        temp = ET.SubElement(customer, key)
+        temp.text = doc[key]
 
 print(ET.dump(customers))
 

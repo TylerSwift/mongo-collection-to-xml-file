@@ -1,0 +1,30 @@
+<Customers>
+    <Customer>
+        <DocumentVersion>20200105</DocumentVersion>
+        <DLR_CD>1234</DLR_CD>
+        <DB_NM>Dallas</DB_NM>
+        <LGL_NM>1234 Parkway</LGL_NM>
+        <FED_TAX_NO>5678</FED_TAX_NO>
+    </Customer>
+    <Customer>
+        <DocumentVersion>20200105</DocumentVersion>
+        <DLR_CD>7789</DLR_CD>
+        <DB_NM>Austin</DB_NM>
+        <LGL_NM>12345 Parkway</LGL_NM>
+        <FED_TAX_NO>56748</FED_TAX_NO>
+    </Customer>
+    <Customer>
+        <DocumentVersion>20200105</DocumentVersion>
+        <DLR_CD>19191</DLR_CD>
+        <DB_NM>Houston</DB_NM>
+        <LGL_NM>12345678 Parkway</LGL_NM>
+        <FED_TAX_NO>48123</FED_TAX_NO>
+    </Customer>
+    <Customer>
+        <DocumentVersion>20200105</DocumentVersion>
+        <DLR_CD>6671</DLR_CD>
+        <DB_NM>San</DB_NM>
+        <LGL_NM>33 No Parkway</LGL_NM>
+        <FED_TAX_NO>99</FED_TAX_NO>
+    </Customer>
+</Customers>
